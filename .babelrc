@@ -1,0 +1,15 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    ["import", {
+      "libraryName": "@material-ui/core",
+      "libraryDirectory": "",  // default: lib
+      "camel2DashComponentName": false  // default: true
+    }, "core"],
+    ["import", {
+      "libraryName": "@material-ui/icons",
+      "libraryDirectory": "",  // default: lib
+      "camel2DashComponentName": false  // default: true
+    }, "icons"]
+  ]
+}
