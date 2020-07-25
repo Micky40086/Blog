@@ -1,7 +1,7 @@
 import Hidden from '@material-ui/core/Hidden';
 import Drawer from '@material-ui/core/Drawer';
 import Avatar from '@material-ui/core/Avatar';
-import { Instagram, GitHub } from '@material-ui/icons';
+import { Instagram, GitHub, Home, Person } from '@material-ui/icons';
 
 import styles from './LeftBar.scss'
 
@@ -19,12 +19,27 @@ export default function LeftBar({}) {
       <p>Hi, my name is Mickey. A fullstack developer.</p>
       <div className={styles["social-btn-group"]}>
         <div className={styles["social-btn"]}>
-          <Instagram />
-        </div>
-        <div className={styles["social-btn"]}>
           <GitHub />
         </div>
+        <div className={styles["social-btn"]}>
+          <Instagram />
+        </div>
       </div>
+      <hr />
+      <ul className={styles["nav"]}>
+        <li className={`${styles["nav-link"]} ${styles["active"]}`}>
+          <a href="/">
+            <Home />
+            <span>Home</span>
+          </a>
+        </li>
+        <li className={styles["nav-link"]}>
+          <a href="/">
+            <Person />
+            <span>About</span>
+          </a>
+        </li>
+      </ul>
     </div>
   );
 
