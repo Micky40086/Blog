@@ -1,3 +1,5 @@
+@import 'variables';
+
 .drawer-container {
   padding: 0 15px;
   display: flex;
@@ -34,7 +36,7 @@
   hr {
     width: 100%;
     border: 0;
-    border-top: 1px solid rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
     margin: 1rem 0;
   }
 
@@ -54,14 +56,14 @@
         justify-content: center;
         align-items: center;
         text-decoration: none;
-        color: rgba(255,255,255,0.8);
+        color: rgba(255, 255, 255, 0.8);
         font-weight: bold;
         padding: 10px 0;
       }
 
       &.active {
         a {
-          color: rgba(0,0,0,0.5);
+          color: rgba(0, 0, 0, 0.5);
         }
       }
     }

@@ -4,7 +4,7 @@ import Drawer from '@material-ui/core/Drawer'
 import Avatar from '@material-ui/core/Avatar'
 import { Instagram, GitHub, Home, Person } from '@material-ui/icons'
 
-import styles from './LeftBar.scss'
+import styles from './LeftBar.module.scss'
 
 export default function LeftBar(): JSX.Element {
   const [mobileOpen, setMobileOpen] = React.useState(false)

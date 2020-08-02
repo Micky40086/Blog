@@ -1,12 +1,13 @@
 import React from 'react'
-import styles from './index.scss'
+import Container from '@material-ui/core/Container'
 
-import LeftBar from '../components/LeftBar'
+import ListItem from '../components/ListItem'
+import styles from './index.module.scss'
 
 export default function Index(): JSX.Element {
   return (
-    <div className={styles.container}>
-      <LeftBar />
-    </div>
+    <Container maxWidth="md">
+      <ListItem />
+    </Container>
   )
 }
