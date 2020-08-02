@@ -1,7 +1,8 @@
+import React from 'react'
 import { NextPage } from 'next'
 
 import LeftBar from '../LeftBar'
-import styles from './default.module.scss'
+import styles from './DefaultLayout.module.scss'
 
 const DefaultLayout: NextPage = ({ children }) => (
   <div className={styles['main-container']}>

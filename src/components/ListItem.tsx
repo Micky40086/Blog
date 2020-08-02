@@ -1,9 +1,10 @@
+import React from 'react'
 import styles from './ListItem.module.scss'
 
-export default function ListItem() {
+export default function ListItem(): JSX.Element {
   return (
     <div className={styles['item-container']}>
-      <img src="/Tumurin.png" />
+      <img src="/Tumurin.png" alt="Avatar" />
 
       <div className={styles['text-container']}>
         <a href="/">Why Every Developer Should Have A Blog</a>
