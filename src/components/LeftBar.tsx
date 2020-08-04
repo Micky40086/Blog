@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import Hidden from '@material-ui/core/Hidden'
 import Drawer from '@material-ui/core/Drawer'
 import Avatar from '@material-ui/core/Avatar'
@@ -29,16 +30,20 @@ export default function LeftBar(): JSX.Element {
       <hr />
       <ul className={styles['nav']}>
         <li className={`${styles['nav-link']} ${styles['active']}`}>
-          <a href="/">
-            <Home />
-            <span>Home</span>
-          </a>
+          <Link href="/">
+            <a>
+              <Home />
+              <span>Home</span>
+            </a>
+          </Link>
         </li>
         <li className={styles['nav-link']}>
-          <a href="/">
-            <Person />
-            <span>About</span>
-          </a>
+          <Link href="/about">
+            <a>
+              <Person />
+              <span>About</span>
+            </a>
+          </Link>
         </li>
       </ul>
     </div>

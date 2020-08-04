@@ -1,4 +1,6 @@
 import React from 'react'
+import Link from 'next/link'
+
 import styles from './ListItem.module.scss'
 
 export default function ListItem(): JSX.Element {

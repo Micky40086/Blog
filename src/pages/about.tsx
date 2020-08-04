@@ -1,7 +1,5 @@
 import React from 'react'
 import Container from '@material-ui/core/Container'
-import Link from 'next/link'
-import { GetStaticProps } from 'next'
 
 import ListItem from '../components/ListItem'
 
@@ -21,23 +19,19 @@ export interface Post {
   url: string
 }
 
-export default function Index({ posts }: PostListProps): JSX.Element {
+export default function About({ posts }: PostListProps): JSX.Element {
   return (
     <Container maxWidth="md">
       <div>
         {posts?.map((x) => (
-          <Link key={x.id} href={`/posts/${x.id}`}>
-            <a>
-              <ListItem />
-            </a>
-          </Link>
+          <ListItem key={x.id} />
         ))}
       </div>
     </Container>
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export async function getStaticProps() {
   const res = await fetch('http://localhost:1337/posts')
   const posts = await res.json()
 

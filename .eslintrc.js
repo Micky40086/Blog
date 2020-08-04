@@ -12,7 +12,7 @@ module.exports = {
     'plugin:@typescript-eslint/eslint-recommended', // eslint TypeScript rules (github.com/typescript-eslint/typescript-eslint)
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended', // eslint react rules (github.com/yannickcr/eslint-plugin-react)
-    'plugin:jsx-a11y/recommended', // accessibility plugin
+    // 'plugin:jsx-a11y/recommended', // accessibility plugin
 
     // Prettier plugin and recommended rules
     'prettier/@typescript-eslint',
@@ -21,6 +21,7 @@ module.exports = {
   rules: {
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     '@typescript-eslint/no-var-requires': 0,
+    '@typescript-eslint/explicit-module-boundary-types': 0,
     'react/prop-types': 'off', // We turn off prop-types rule, as we will use TypeScript's types instead.
   },
 }
