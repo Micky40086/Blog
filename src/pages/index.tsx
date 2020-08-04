@@ -3,7 +3,7 @@ import Container from '@material-ui/core/Container'
 import Link from 'next/link'
 import { GetStaticProps } from 'next'
 
-import ListItem from '../components/ListItem'
+import ListItem from 'components/ListItem'
 
 export interface PostListProps {
   posts?: Post[]

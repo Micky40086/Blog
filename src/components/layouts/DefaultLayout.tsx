@@ -1,7 +1,7 @@
 import React from 'react'
 import { NextPage } from 'next'
 
-import LeftBar from '../LeftBar'
+import LeftBar from 'components/LeftBar'
 import styles from './DefaultLayout.module.scss'
 
 const DefaultLayout: NextPage = ({ children }) => (

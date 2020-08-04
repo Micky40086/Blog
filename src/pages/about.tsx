@@ -1,7 +1,7 @@
 import React from 'react'
 import Container from '@material-ui/core/Container'
 
-import ListItem from '../components/ListItem'
+import ListItem from 'components/ListItem'
 
 export interface PostListProps {
   posts?: Post[]
