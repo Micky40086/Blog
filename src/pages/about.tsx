@@ -22,11 +22,7 @@ export interface Post {
 export default function About({ posts }: PostListProps): JSX.Element {
   return (
     <Container maxWidth="md">
-      <div>
-        {posts?.map((x) => (
-          <ListItem key={x.id} />
-        ))}
-      </div>
+      <div></div>
     </Container>
   )
 }

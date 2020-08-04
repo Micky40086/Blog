@@ -1,14 +1,18 @@
 import React from 'react'
+import Link from 'next/link'
 
 import styles from './ListItem.module.scss'
+import { Post as PostType } from '~/pages/index'
 
-export default function ListItem(): JSX.Element {
+export default function ListItem({ post }: { post: PostType }): JSX.Element {
   return (
     <div className={styles['item-container']}>
       <img src="/Tumurin.png" alt="Avatar" />
 
       <div className={styles['text-container']}>
-        <a href="/">Why Every Developer Should Have A Blog</a>
+        <Link href={`/posts/${post.id}`}>
+          <a>{post.title}</a>
+        </Link>
         <div className={styles['meta']}>
           <span className="date">Published 2 days ago</span>
           <span className="time">5 min read</span>

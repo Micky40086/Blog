@@ -1,9 +1,9 @@
 import React from 'react'
 import Container from '@material-ui/core/Container'
-import Link from 'next/link'
 import { GetStaticProps } from 'next'
 
 import ListItem from 'components/ListItem'
+import { Divider } from '@material-ui/core'
 
 export interface PostListProps {
   posts?: Post[]
@@ -26,11 +26,7 @@ export default function Index({ posts }: PostListProps): JSX.Element {
     <Container maxWidth="md">
       <div>
         {posts?.map((x) => (
-          <Link key={x.id} href={`/posts/${x.id}`}>
-            <a>
-              <ListItem />
-            </a>
-          </Link>
+          <ListItem key={x.id} post={x} />
         ))}
       </div>
     </Container>
