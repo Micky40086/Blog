@@ -1,9 +1,13 @@
 import React from 'react'
 import Container from '@material-ui/core/Container'
 import { GetStaticProps } from 'next'
+import classNames from 'classnames/bind'
 
 import ListItem from 'components/ListItem'
 import { Divider } from '@material-ui/core'
+import styles from './index.module.scss'
+
+const cx = classNames.bind(styles)
 
 export interface PostListProps {
   posts?: Post[]
@@ -24,7 +28,7 @@ export interface Post {
 export default function Index({ posts }: PostListProps): JSX.Element {
   return (
     <Container maxWidth="md">
-      <div>
+      <div className={cx('Tumurin')}>
         {posts?.map((x) => (
           <ListItem key={x.id} post={x} />
         ))}
