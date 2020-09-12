@@ -1,15 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
-import Hidden from '@material-ui/core/Hidden'
-import Drawer from '@material-ui/core/Drawer'
-import Avatar from '@material-ui/core/Avatar'
+import { useRecoilState } from 'recoil'
+import { Hidden, Drawer, Avatar } from '@material-ui/core'
 import { Instagram, GitHub, Home, Person } from '@material-ui/icons'
 
+import { leftBarOpenState } from '~/recoil/leftBarOpenState'
 import styles from './LeftBar.module.scss'
 
 export default function LeftBar(): JSX.Element {
-  const [mobileOpen, setMobileOpen] = React.useState(false)
-  // const container = window !== undefined ? () => window().document.body : undefined;
+  const [mobileOpen, setMobileOpen] = useRecoilState(leftBarOpenState)
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen)
   }
@@ -59,9 +58,6 @@ export default function LeftBar(): JSX.Element {
           anchor={'left'}
           open={mobileOpen}
           onClose={handleDrawerToggle}
-          // classes={{
-          //   paper: classes.drawerPaper,
-          // }}
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}
@@ -70,13 +66,7 @@ export default function LeftBar(): JSX.Element {
         </Drawer>
       </Hidden>
       <Hidden xsDown implementation="css">
-        <Drawer
-          // classes={{
-          //   paper: classes.drawerPaper,
-          // }}
-          variant="permanent"
-          open
-        >
+        <Drawer variant="permanent" open>
           {drawer}
         </Drawer>
       </Hidden>

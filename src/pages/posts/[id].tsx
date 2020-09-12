@@ -1,6 +1,7 @@
 import React from 'react'
 import { GetStaticProps, GetStaticPropsContext } from 'next'
 import ClassNames from 'classnames/bind'
+import ReactMarkdown from 'react-markdown'
 
 import { Post as PostType } from '../index'
 import styles from './[id].module.scss'
@@ -15,7 +16,10 @@ export default function Post({ post }: PostProps): JSX.Element {
   return (
     <div className={cx('container')}>
       <h2>{post.title}</h2>
-      <div className={cx('content')}></div>
+
+      <div className={cx('content')}>
+        <ReactMarkdown source={post.description} />
+      </div>
     </div>
   )
 }
@@ -46,6 +50,6 @@ export async function getStaticPaths() {
 
   return {
     paths: [{ params: { id: '1' } }, { params: { id: '2' } }],
-    fallback: false, // See the "fallback" section below
+    fallback: false,
   }
 }

@@ -18,10 +18,18 @@ module.exports = {
     'prettier/@typescript-eslint',
     'plugin:prettier/recommended',
   ],
+  plugins: ['react-hooks'],
   rules: {
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     '@typescript-eslint/no-var-requires': 0,
     '@typescript-eslint/explicit-module-boundary-types': 0,
     'react/prop-types': 'off', // We turn off prop-types rule, as we will use TypeScript's types instead.
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': [
+      'warn',
+      {
+        additionalHooks: 'useRecoilCallback',
+      },
+    ],
   },
 }

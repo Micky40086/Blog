@@ -1,4 +1,20 @@
 .main-container {
   margin-left: 280px;
   padding: 50px;
+
+  @media (max-width: 599px) {
+    margin-left: 0;
+  }
+}
+
+.menu-btn {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+  }
 }

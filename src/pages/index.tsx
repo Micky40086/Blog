@@ -14,7 +14,7 @@ export interface PostListProps {
 export interface Post {
   id: number
   title: string
-  desc: string
+  description: string
   image: {
     url: string
   }
